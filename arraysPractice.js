@@ -59,6 +59,13 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
   //Code Here
 
+  // function evenFinder(nums){
+  //   for(var i = 0; i < nums.length; i++){
+  //     if (nums[i] % 2 !== 0){
+  //     nums.splice(i, 1);
+  //   	}
+  //   }
+  // }
 
 //Next problem
 
@@ -70,7 +77,18 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-
+  // function divider(numbersArray){
+  //   	var odd = [];
+  //   	var even = [];
+  //   	for(i = 0; i < numbersArray.length; i++){
+  //   		if(numbersArray[i] % 2 !== 0){
+  //   		odd.push(i);
+  //   		}
+  //   		else{
+  //   		even.push(i);
+  //   		}
+  //   	}
+  //   }
 
 //Next Problem
 
@@ -96,7 +114,9 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-
+  function reverse(str){
+   	return str.split("").reverse().join("");
+   }
 
 //Next Problem
 
@@ -131,8 +151,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
-
-
+  function maker(){
+  	var numArray = [];
+  	for (var i = 1; i <= 215; i++){
+     		numArray.push(i);
+  	}
+  	return numArray;
+  }
 
 //Next Problem
 
