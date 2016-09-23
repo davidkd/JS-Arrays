@@ -59,14 +59,15 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 
   //Code Here
 
-  // function evenFinder(nums){
-  //   for(var i = 0; i < nums.length; i++){
-  //     if (nums[i] % 2 !== 0){
-  //     nums.splice(i, 1);
-  //   	}
-  //   }
-  // }
-
+  function evenFinder(nums){
+    for(var i = 0; i < nums.length; i++){
+      if (nums[i] % 2 !== 0){
+      nums.splice(i, 1);
+      i--;
+      }
+    }
+    return nums;
+  }
 //Next problem
 
 
@@ -77,19 +78,19 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-  // function divider(numbersArray){
-  //   	var odd = [];
-  //   	var even = [];
-  //   	for(i = 0; i < numbersArray.length; i++){
-  //   		if(numbersArray[i] % 2 !== 0){
-  //   		odd.push(i);
-  //   		}
-  //   		else{
-  //   		even.push(i);
-  //   		}
-  //   	}
-  //   }
-
+  function divider(numbersArray){
+      	var odd = [];
+      	var even = [];
+      	for(i = 0; i < numbersArray.length; i++){
+      		if(numbersArray[i] % 2 === 0){
+      		even.push(numbersArray[i]);
+      		}
+      		else{
+      		odd.push(numbersArray[i]);
+      		}
+      	}
+      	return [even, odd];
+      }
 //Next Problem
 
 
@@ -102,7 +103,18 @@ var getRandomArbitrary = function() {
 // Your job is to write a function named finder that will get a random number (by invoking getRandomArbitrary), then loop through the array (that will be passed in as a parameter) to see if that random number is in the array. If it is, return true, if it's not, return false
 
   //Code Here
-
+  function finder(arr) {
+    	var randomNum = getRandomArbitrary();
+    	for(var i = 0; i < arr.length; i++) {
+    		if (arr.length === randomNum) {
+    			return true;
+    		}
+    		else {
+    		return false;
+    	}
+    	}
+      return false;
+    }
   //Code Here
 
 
@@ -167,7 +179,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
   //Code Here
+  function addTen(numbers) {
+    	var newArray = [];
+    	for(var i = 0; i < numbers.length; i++) {
+    		numbers[i] = parseInt(numbers[i]);
+    		newArray.push(numbers[i] + 10);
 
+    	}
+    	return newArray;
+    }
 
 
 //Next Problem
@@ -188,7 +208,14 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
-
+  function longer(arr1, arr2) {
+    	if (arr1.length > arr2.length) {
+    		return arr1;
+    	}
+    	else {
+    		return arr2;
+    	}
+    }
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
@@ -198,7 +225,13 @@ for(var i = 0; i < num2; i++){
 
   //Code Here
 
-
+  function both(arr1, arr2) {
+  	var newArray = [];
+  	if(arr1[i] === arr2[i]) {
+  		newArray.push(arr1[i]);
+  	}
+  	return newArray;
+  }
 
 
 //NEXT PROBLEM
